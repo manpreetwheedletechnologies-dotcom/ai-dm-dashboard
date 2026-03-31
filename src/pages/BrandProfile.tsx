@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Save, Upload } from 'lucide-react';
+import { Save } from 'lucide-react';
 
 const tabs = ['Ad Platform Connection', 'Subscribe', 'Your Profile'];
 const sections = ['Basics', 'Login and security'];

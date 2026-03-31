@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrainCircuit, TrendingUp, AlertTriangle, Lightbulb, CheckCircle, ArrowUpRight, ChevronRight } from 'lucide-react';
 
 const phases = [
   {

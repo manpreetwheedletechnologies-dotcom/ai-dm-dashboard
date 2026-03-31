@@ -4,29 +4,29 @@ import React, { useState, useEffect } from 'react';
 const dateRanges = ['Last 7 days', 'Last 14 days', 'Last 30 days', 'Last 90 days', 'Today'];
 
 // Mock spark data for mini line chart simulation
-const spendData = [44, 55, 78, 90, 80, 72, 100, 95, 88, 85, 60, 20, 10, 5];
-const roasData = [1.1, 1.2, 1.5, 2.0, 1.8, 1.6, 2.5, 2.3, 2.1, 2.0, 1.5, 0.8, 0.5, 0.2];
+// const spendData = [44, 55, 78, 90, 80, 72, 100, 95, 88, 85, 60, 20, 10, 5];
+// const roasData = [1.1, 1.2, 1.5, 2.0, 1.8, 1.6, 2.5, 2.3, 2.1, 2.0, 1.5, 0.8, 0.5, 0.2];
 
-const dates = ['2025-08-19', '2025-08-20', '2025-08-21', '2025-08-22', '2025-08-23', '2025-08-24', '2025-08-25'];
+// const dates = ['2025-08-19', '2025-08-20', '2025-08-21', '2025-08-22', '2025-08-23', '2025-08-24', '2025-08-25'];
 
-const kpis = [
-  { label: 'Spend', value: '$425.05', color: '#7c3aed', checked: true },
-  { label: 'CPM', value: '$5.55', color: '#94a3b8', checked: false },
-  { label: 'CPC', value: '$0.07', color: '#94a3b8', checked: false },
-  { label: 'CTR', value: '7.45%', color: '#94a3b8', checked: false },
-  { label: 'ROAS', value: '1.83', color: '#16a34a', checked: true },
-  { label: 'Purchase Value', value: '$0', color: '#94a3b8', checked: false },
-];
+// const kpis = [
+//   { label: 'Spend', value: '$425.05', color: '#7c3aed', checked: true },
+//   { label: 'CPM', value: '$5.55', color: '#94a3b8', checked: false },
+//   { label: 'CPC', value: '$0.07', color: '#94a3b8', checked: false },
+//   { label: 'CTR', value: '7.45%', color: '#94a3b8', checked: false },
+//   { label: 'ROAS', value: '1.83', color: '#16a34a', checked: true },
+//   { label: 'Purchase Value', value: '$0', color: '#94a3b8', checked: false },
+// ];
 
-const dailyRows = [
-  { date: '2025-08-25', spend: '$5.38', cpm: '$5.38', cpc: '$1.00', ctr: '0.54%', roas: '0.00', purchase: '$0' },
-  { date: '2025-08-24', spend: '$80.56', cpm: '$5.20', cpc: '$0.06', ctr: '8.43%', roas: '0.00', purchase: '$0' },
-  { date: '2025-08-23', spend: '$88.25', cpm: '$5.43', cpc: '$0.06', ctr: '8.58%', roas: '4.56', purchase: '$402.5' },
-  { date: '2025-08-22', spend: '$100.78', cpm: '$6.00', cpc: '$0.07', ctr: '9.20%', roas: '5.11', purchase: '$515' },
-  { date: '2025-08-21', spend: '$78.34', cpm: '$5.10', cpc: '$0.05', ctr: '7.90%', roas: '3.21', purchase: '$251' },
-  { date: '2025-08-20', spend: '$55.22', cpm: '$4.80', cpc: '$0.05', ctr: '7.10%', roas: '2.50', purchase: '$138' },
-  { date: '2025-08-19', spend: '$44.10', cpm: '$4.60', cpc: '$0.04', ctr: '6.80%', roas: '2.10', purchase: '$93' },
-];
+// const dailyRows = [
+//   { date: '2025-08-25', spend: '$5.38', cpm: '$5.38', cpc: '$1.00', ctr: '0.54%', roas: '0.00', purchase: '$0' },
+//   { date: '2025-08-24', spend: '$80.56', cpm: '$5.20', cpc: '$0.06', ctr: '8.43%', roas: '0.00', purchase: '$0' },
+//   { date: '2025-08-23', spend: '$88.25', cpm: '$5.43', cpc: '$0.06', ctr: '8.58%', roas: '4.56', purchase: '$402.5' },
+//   { date: '2025-08-22', spend: '$100.78', cpm: '$6.00', cpc: '$0.07', ctr: '9.20%', roas: '5.11', purchase: '$515' },
+//   { date: '2025-08-21', spend: '$78.34', cpm: '$5.10', cpc: '$0.05', ctr: '7.90%', roas: '3.21', purchase: '$251' },
+//   { date: '2025-08-20', spend: '$55.22', cpm: '$4.80', cpc: '$0.05', ctr: '7.10%', roas: '2.50', purchase: '$138' },
+//   { date: '2025-08-19', spend: '$44.10', cpm: '$4.60', cpc: '$0.04', ctr: '6.80%', roas: '2.10', purchase: '$93' },
+// ];
 
 // Simple SVG polyline chart
 const ChartLine: React.FC<{ data: number[]; color: string; height: number; width: number }> = ({ data, color, height, width }) => {

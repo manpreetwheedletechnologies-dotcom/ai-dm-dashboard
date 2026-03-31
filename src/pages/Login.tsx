@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../store/slices/authSlice';
 import type { AppDispatch } from '../store';
 import { useNavigate, Link } from 'react-router-dom';
-import { BrainCircuit, Lock, Mail, Activity } from 'lucide-react';
+import {  Lock, Mail, Activity } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export const Login: React.FC = () => {

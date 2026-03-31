@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Target, MapPin, Globe, DollarSign, TrendingUp, Users, Save, ChevronDown, Search } from 'lucide-react';
+import { TrendingUp, Save, ChevronDown, Search } from 'lucide-react';
 
 const goals = [
   { value: 'roas', label: 'Maximize ROAS', desc: 'Get highest return on ad spend' },

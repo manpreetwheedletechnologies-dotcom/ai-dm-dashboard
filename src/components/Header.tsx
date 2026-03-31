@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bell, Search as SearchIcon, Mic, LogOut, CheckCircle2, AlertCircle, X, Sparkles } from 'lucide-react';
+import { Bell, Search as SearchIcon, LogOut, CheckCircle2, AlertCircle, X, Sparkles } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Globe, PlusCircle, ChevronDown } from 'lucide-react';
@@ -20,7 +20,6 @@ export const Header: React.FC = () => {
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const activeSite = websites.find((s: any) => s.id === activeWebsiteId);
 
   const handleAddWebsite = () => {
     if (!newSiteName || !newSiteUrl) {
